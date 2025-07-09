@@ -1,1 +1,17 @@
 
+What is this project?
+This project teaches you how to:
+Create two Ubuntu containers using Docker
+Configure one as an SSH Server (Container 1)
+Configure the other as an SSH Client (Container 2)
+Establish a secure SSH connection from container 2 to container 1
+| Step                                     | Action                                                            |
+| ---------------------------------------- | ----------------------------------------------------------------- |
+| **1. Pull Ubuntu image**                 | Get the latest Ubuntu image from Docker Hub                       |
+| **2. Run Container 1**                   | Start the first Ubuntu container                                  |
+| **3. Install SSH Server in Container 1** | `apt install openssh-server` to allow SSH access                  |
+| **4. Set root password in Container 1**  | Use `passwd` command so SSH login is allowed                      |
+| **5. Run Container 2**                   | Start the second Ubuntu container                                 |
+| **6. Install SSH Client in Container 2** | `apt install openssh-client` to make outbound SSH connections     |
+| **7. Use SSH in Container 2**            | Run: `ssh root@<Container1-IP>` to connect to the first container |
+| **8. Test secure connection**            | Ensure the containers can talk to each other securely using SSH   |
